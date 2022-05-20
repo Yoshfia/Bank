@@ -12,11 +12,11 @@ public class ATMProgram {
             trial++;
             System.out.print("Masukan PIN Anda: ");
             int pin = input.nextInt();
-            if (cs.atm.getPin()==pin){
+            if (cs.atm.getPin() == pin) {
                 break;
-            }else if (trial < 3) {
-                System.out.println("PIN Yang Anda Masukan Salah Silahkan Coba Lagi percobaan " );
-            }else {
+            } else if (trial < 3) {
+                System.out.println("PIN Yang Anda Masukan Salah Silahkan Coba Lagi percobaan ");
+            } else {
                 System.out.println("ATM anda terblokir");
                 System.exit(0);
             }
@@ -48,7 +48,7 @@ public class ATMProgram {
                     System.out.print("Masukan Jumlah Uang Yang Ingin Anda Tabung = Rp. ");
 
                     add = input.nextInt();
-                    if (add == 0){
+                    if (add == 0) {
                         continue;
                     }
                     cs.addBalance(add);
@@ -69,7 +69,7 @@ public class ATMProgram {
                         System.out.println("Saldo anda adalah Rp." + cs.atm.getBalance() + " batas minimal saldo adalah Rp.50000");
                         break;
                     }
-                    if (dec == 0){
+                    if (dec == 0) {
                         continue;
                     }
                     cs.decBalance(dec);
@@ -90,7 +90,7 @@ public class ATMProgram {
                     System.out.println("Masukan PIN Baru Anda :");
                     int newPin = input.nextInt();
                     cs.atm.setPin(newPin);
-                    if (newPin == 0){
+                    if (newPin == 0) {
                         continue;
                     }
                     System.out.println("PIN Anda Telah Diganti");
